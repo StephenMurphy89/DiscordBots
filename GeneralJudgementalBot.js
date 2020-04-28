@@ -5,14 +5,7 @@ const client = new Discord.Client()
 client.login(config.token)
 
 client.on('ready', () => {
-    client.user.setStatus('Silently Judging')
-    client.user.setPresence({
-        game: {
-            name: 'Going Through Beta (with music)',
-            type: "STREAMING",
-            url: "https://www.twitch.tv/monstercat"
-        }
-    });
+    client.user.setPresence({ activity: { name: 'Silently Judging' }})
 });
 
 client.on('message', (receivedMessage) => {
