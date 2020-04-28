@@ -13,8 +13,8 @@ client.on('message', (receivedMessage) => {
     if (receivedMessage.author == client.user) {
         return
     }
-    if(receivedMessage.content.startsWith('!play'))
-    	receivedMessage.channel.send("Hey man, we have a music channel for that");
+    if(receivedMessage.author.username == 'Rythm')
+    	receivedMessage.channel.send('Hey man, we have a music channel for that...');
 })
 
 
