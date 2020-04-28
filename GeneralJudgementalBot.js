@@ -9,12 +9,21 @@ bot_secret_token = "[secret_token]"
 client.login(bot_secret_token)
 
 client.on('message', (receivedMessage) => {
-    var generalChannel = client.channels.cache.get('[client_channel]')
-    if (receivedMessage.author == client.user) {
-        return
-    }
-    if(receivedMessage.author.username == 'Rythm')
-    	receivedMessage.channel.send('Hey man, we have a music channel for that...');
-})
+	if (receivedMessage.author == client.user) return
+	
+	if(receivedMessage.channel.name !== 'music'){
+		if((receivedMessage.author.username == 'Rythm' || receivedMessage.author.username == 'Rythm 2')
+			&& !receivedMessage.content.includes('Searching'))
+		
+			receivedMessage.channel.send(varyResponses());
+    }    
+});
+
+let varyResponses = () => {
+	// todo: Actually vary responses
+	let responses = ['Hey man, we have a music channel for that...'];
+	
+	return responses[0];
+}
 
 
