@@ -5,7 +5,7 @@ const client = new Discord.Client()
 client.login(config.token)
 
 client.on('ready', () => {
-    client.user.setPresence({ activity: { name: 'Silently Judging' }})
+    client.user.setPresence({ activity: { type: 'WATCHING', name: ' and Silently Judging' }})
 });
 
 client.on('message', (receivedMessage) => {
