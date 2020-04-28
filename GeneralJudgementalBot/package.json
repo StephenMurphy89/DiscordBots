@@ -1,0 +1,12 @@
+{
+  "name": "GeneralJudgmentalBot",
+  "version": "1.0.0",
+  "description": "A Judgy Discord bot!",
+  "main": "GeneralJudgementalBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Steve",
+  "license": "ISC"
+}
